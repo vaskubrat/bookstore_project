@@ -1,0 +1,13 @@
+book_id,title,author,genre,price,pages
+B101,The Silent Patient,Alex Michaelides,Thriller,16.99,325
+B102,Atomic Habits,James Clear,Self-Help,18.50,320
+B103,Dune,Frank Herbert,Sci-Fi,14.99,688
+B104,Educated,Tara Westover,Memoir,15.99,352
+B105,The Midnight Library,Matt Haig,Fiction,17.50,288
+B106,Sapiens,Yuval Noah Harari,Non-Fiction,21.00,464
+B107,Project Hail Mary,Andy Weir,Sci-Fi,N/A,476
+B108,Becoming,Michelle Obama,Memoir,19.99,448
+B109,The Alchemist,Paulo Coelho,Fiction,13.50,197
+B110,Deep Work,Cal Newport,Self-Help,16.00,296
+B111,Gone Girl,Gillian Flynn,Thriller,14.99,415
+B112,Thinking Fast and Slow,Daniel Kahneman,Non-Fiction,22.50,499
