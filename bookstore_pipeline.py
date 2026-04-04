@@ -114,7 +114,8 @@ def report(conn):
 
 #13 city breakdown: total revenue and number of unique customers per city
     revenue_unique_clt_per_city = pd.read_sql('''
-    SELECT COUNT(distinct c.customer_id) AS unique_customers,
+    SELECT c.city, 
+            COUNT(distinct c.customer_id) AS unique_customers,
             sum(o.revenue) AS total_revenue
     FROM customers c
     INNER JOIN orders o ON o.customer_id = c.customer_id
@@ -131,12 +132,13 @@ def report(conn):
     INNER JOIN reviews r ON r.book_id = b.book_id
     GROUP BY b.book_id
     HAVING count(r.rating) > 1
-    ORDER BY r.rating DESC
+    ORDER BY avg_rating DESC
     ''', conn)
     print(f"\nHighest rated books with at least 2 reviews:\n {highest_rated_books}")
 
-tables_dict = extract(path)
-tables_dict_clean = transform(tables_dict)
-connection = load(tables_dict_clean, db_path)
-report(connection)
-
+if __name__ == '__main__':
+    tables_dict = extract(path)
+    tables_dict_clean = transform(tables_dict)
+    connection = load(tables_dict_clean, db_path)
+    report(connection)
+    connection.close()
