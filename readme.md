@@ -11,7 +11,7 @@ ETL pipeline that cleans and analyzes online bookstore data using Python, pandas
 
 ## How to run
 pip install -r requirements.txt
-python bookstore_pipeline.py
+run python bookstore_pipeline.py
 
 ## Tech used
 
